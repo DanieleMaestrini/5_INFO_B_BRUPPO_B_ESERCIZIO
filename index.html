@@ -16,21 +16,21 @@
             <div class="form-row">
               <div class="col-md-4 mb-4">
                 <label for="validationCustom01">Popolazione Totale</label>
-                <input type="text" class="form-control" id="validationCustom01" placeholder="Popolazione Totale" required>
-                <div class="valid-feedback">
+                <input type="number" class="form-control" id="validationCustom01" placeholder="Popolazione Totale" required>
+                <div class="valid-feedback" id="PTotV">
                   Campo valido
                 </div>
-                <div class="invalid-feedback">
+                <div class="invalid-feedback" id="PTotF">
                     Max Popolazione: 50
                 </div>
               </div>
               <div class="col-md-4 mb-4">
                 <label for="validationCustom02">Numero Contagiati</label>
-                <input type="text" class="form-control" id="validationCustom02" placeholder="Numero Contagiati" required>
-                <div class="valid-feedback">
+                <input type="number" class="form-control" id="validationCustom02" placeholder="Numero Contagiati" required>
+                <div class="valid-feedback" id="NConV">
                     Campo valido
                 </div>
-                <div class="invalid-feedback">
+                <div class="invalid-feedback" id="NConF">
                     Max Contagiati=Popolazione
                 </div>
               </div>
@@ -38,26 +38,26 @@
             <div class="form-row">
               <div class="col-md-4 mb-4">
                 <label for="validationCustom03">Numero Quarantena</label>
-                <input type="text" class="form-control" id="validationCustom03" placeholder="Numero Quarantena" required>
-                <div class="invalid-feedback">
+                <input type="number" class="form-control" id="validationCustom03" placeholder="Numero Quarantena" required>
+                <div class="invalid-feedback" id="NQuaF">
                   Max Quaratena=Numero Contagiati
                 </div>
-                <div class="valid-feedback">
+                <div class="valid-feedback" id="NQuaV">
                     Campo valido
                   </div>
               </div>
               <div class="col-md-4 mb-4">
                 <label for="validationCustom04">Tempo Guarigione</label>
-                <input type="text" class="form-control" id="validationCustom04" placeholder="Tempo Guarigione" required>
-                <div class="invalid-feedback">
+                <input type="number" class="form-control" id="validationCustom04" placeholder="Tempo Guarigione" required>
+                <div class="invalid-feedback" id="TGF">
                   Deve essere positivo
                 </div>
-                <div class="valid-feedback">
+                <div class="valid-feedback" id="TGV">
                     Campo valido
                   </div>
               </div>     
              </div>
-             <button class="btn btn-primary" type="submit">Avvio Simulazione</button>              
+             <button class="btn btn-primary" id="InizioSimulazione" type="submit">Avvio Simulazione</button>              
          </form>
       </div>
     <div id="Simulazione">
