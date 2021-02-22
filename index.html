@@ -1,15 +1,65 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it">  
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulazione Covid Gruppo_B</title>
 </head>
 <body>
-    <div id="Form">
-
-    </div>
+<div class="container"> 
+    <h3 class="title">Simulazione Pandemia</h3>
+    <br>
+    <div id="Form" class="container">
+        <form class="needs-validation" novalidate>
+            <div class="form-row">
+              <div class="col-md-4 mb-4">
+                <label for="validationCustom01">Popolazione Totale</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="Popolazione Totale" required>
+                <div class="valid-feedback">
+                  Campo valido
+                </div>
+                <div class="invalid-feedback">
+                    Max Popolazione: 50
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <label for="validationCustom02">Numero Contagiati</label>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="Numero Contagiati" required>
+                <div class="valid-feedback">
+                    Campo valido
+                </div>
+                <div class="invalid-feedback">
+                    Max Contagiati=Popolazione
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-4 mb-4">
+                <label for="validationCustom03">Numero Quarantena</label>
+                <input type="text" class="form-control" id="validationCustom03" placeholder="Numero Quarantena" required>
+                <div class="invalid-feedback">
+                  Max Quaratena=Numero Contagiati
+                </div>
+                <div class="valid-feedback">
+                    Campo valido
+                  </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <label for="validationCustom04">Tempo Guarigione</label>
+                <input type="text" class="form-control" id="validationCustom04" placeholder="Tempo Guarigione" required>
+                <div class="invalid-feedback">
+                  Deve essere positivo
+                </div>
+                <div class="valid-feedback">
+                    Campo valido
+                  </div>
+              </div>     
+             </div>
+             <button class="btn btn-primary" type="submit">Avvio Simulazione</button>              
+         </form>
+      </div>
     <div id="Simulazione">
 
     </div>
@@ -17,5 +67,6 @@
 
     </div>
     <script src="./JS/script.js"></script>
+</div>
 </body>
 </html>
