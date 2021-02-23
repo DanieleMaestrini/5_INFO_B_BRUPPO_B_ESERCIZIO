@@ -14,7 +14,6 @@ var Dati={
 stop = false;
 function simulazione(dati) {
     //Grandezza finestra di gioco
-    console.log(dati.TGUAR);
     var canvas = document.getElementById("finestraGioco");
     var ctx = canvas.getContext("2d");
 
@@ -214,17 +213,17 @@ function simulazione(dati) {
         if (malati != 0){
             id = window.requestAnimationFrame(disegna);
         } else{
-            //disegnaGrafico(dati_iterazione);
+            var datiGraficoTorta=dati_iterazione[parseInt(dati_iterazione.length/2)];
+            disegnaGraficoLinea(dati_iterazione);
+            disegnaGraficoTorta(datiGraficoTorta);
             console.log("Sani: " + sani);
             console.log("Malati: " + malati);
             console.log("Guariti: " + curati);
         }
         // frame++;
     }
-
     function init() {
         id = window.requestAnimationFrame(disegna);
     }
-
     init();
 }
