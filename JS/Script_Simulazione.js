@@ -10,12 +10,11 @@ var Dati={
 } 
 */
 
-/*Inizio parte simulazione DHN*/
+/*Inizio parte simulazione*/
 stop = false;
-
 function simulazione(dati) {
     //Grandezza finestra di gioco
-    console.log(dati.TGUAR)
+    console.log(dati.TGUAR);
     var canvas = document.getElementById("finestraGioco");
     var ctx = canvas.getContext("2d");
 
@@ -62,7 +61,7 @@ function simulazione(dati) {
             // valore in pi-greco
             this.direzione = direzione;
             this.velocita = velocita;
-            this.raggio = 5;
+            this.raggio = 10;
             // il tempo ci servirà per valure la guarigione
             this.tempo = stato ? new Date().getTime() : 0;
         }
@@ -215,7 +214,7 @@ function simulazione(dati) {
         if (malati != 0){
             id = window.requestAnimationFrame(disegna);
         } else{
-            disegnaGrafico(dati_iterazione);
+            //disegnaGrafico(dati_iterazione);
             console.log("Sani: " + sani);
             console.log("Malati: " + malati);
             console.log("Guariti: " + curati);

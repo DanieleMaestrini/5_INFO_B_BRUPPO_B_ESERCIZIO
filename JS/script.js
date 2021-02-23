@@ -19,7 +19,7 @@ function ControlloCompilazione(e)
     if(e.target==PTot)
     {
         PTot=document.getElementById("validationCustom01");
-        if(PTot.value>0 && PTot.value<=50)
+        if(PTot.value>0 && PTot.value<=100)
         {
             document.getElementById("PTotV").style.display="block";       
             document.getElementById("PTotF").style.display="none";    
@@ -95,10 +95,10 @@ function InvioDati(e)
     if(Controllo==true)
     {
         var Dati={
-            PTOT: document.getElementById("validationCustom01"),
-            NCONT: document.getElementById("validationCustom02"),
-            NQUAR: document.getElementById("validationCustom03"),
-            TGUAR: document.getElementById("validationCustom04")
+            PTOT: document.getElementById("validationCustom01").value,
+            NCONT: document.getElementById("validationCustom02").value,
+            NQUAR: document.getElementById("validationCustom03").value,
+            TGUAR: document.getElementById("validationCustom04").value
         };
         simulazione(Dati);
         document.getElementById("InizioSimulazione").disabled=true;
