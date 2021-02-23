@@ -1,29 +1,34 @@
 function disegnaGraficoLinea(datiGrafico)
 {
+  var inizio=datiGrafico[0];
+  var secondoQuinto=datiGrafico[parseInt((datiGrafico.length/2)/2)];
+  var meta=datiGrafico[parseInt(datiGrafico.length/2)];
+  var quartoQuinto=datiGrafico[parseInt((datiGrafico.length/2)/2)+parseInt(datiGrafico.length/2)];
+  var fine=datiGrafico[parseInt(datiGrafico.length-1)];
   new Chart(document.getElementById("line-chart"), 
   {
       type: 'line',
       data: 
       {
-        labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
+        labels: [inizio.label, secondoQuinto.label, meta.label, quartoQuinto.label, fine.label],
         datasets: 
         [
           { 
-            data: [86,114,106,106,107,111,133,221,783,2478],
+            data: [inizio.malati, secondoQuinto.malati, meta.malati, quartoQuinto.malati, fine.malati],
             label: "Contagiati",
-            borderColor: "#3e95cd",
+            borderColor: "#ff0000",
             fill: false
           }, 
           { 
-            data: [282,350,411,502,635,809,947,1402,3700,5267],
+            data: [inizio.sani, secondoQuinto.sani, meta.sani, quartoQuinto.sani, fine.sani],
             label: "Sani",
-            borderColor: "#8e5ea2",
+            borderColor: "#008000",
             fill: false
           }, 
           { 
-            data: [168,170,178,190,203,276,408,547,675,734],
+            data: [inizio.guariti, secondoQuinto.guariti, meta.guariti, quartoQuinto.guariti, fine.guariti],
             label: "Guariti",
-            borderColor: "#3cba9f",
+            borderColor: "#0000ff",
             fill: false
           },
         ]

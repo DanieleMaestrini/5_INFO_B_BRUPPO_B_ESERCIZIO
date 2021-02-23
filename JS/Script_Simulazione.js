@@ -13,6 +13,7 @@ var Dati={
 /*Inizio parte simulazione*/
 stop = false;
 function simulazione(dati) {
+    var label=0;
     //Grandezza finestra di gioco
     var canvas = document.getElementById("finestraGioco");
     var ctx = canvas.getContext("2d");
@@ -200,15 +201,16 @@ function simulazione(dati) {
         disegnaPareti();
         disegnaTuttiPallini();
         muoviPallini();
-
+        
         dati_iterazione.push(
             {
                 malati: malati,
                 sani: sani,
-                guariti: curati
+                guariti: curati,
+                label:label++
             },
         )
-
+        console.log(dati_iterazione);
         // controlla che finisca il ciclo
         if (malati != 0){
             id = window.requestAnimationFrame(disegna);
